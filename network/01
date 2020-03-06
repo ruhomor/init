@@ -1,1 +1,1 @@
-netstat -i | awk '!NF || !seen[$1]++' | awk '{ print $1 }'
+ifconfig -l
