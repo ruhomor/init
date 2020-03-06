@@ -1,0 +1,8 @@
+#!/bin/bash
+username=
+uid=
+echo "Write user to be deleted"
+read username
+uid=`cat /etc/passwd | grep $username: | cut -d ":" -f3`
+sudo pkill -U $uid
+sudo userdel -f $username
